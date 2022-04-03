@@ -9,6 +9,7 @@ public class DatabaseConnection {
         //I'm using mysql to be database
         //and the name of table is users, this table includes all the user information
         //like firstname lastname username password
+        //These three lines need to be changed on your own computer
         String databaseName = "airline";//here you can use your own database name
         String databaseUser = "root";//this is the username of your database
         String databasePassword = "qyc220284";//here is the password for the user

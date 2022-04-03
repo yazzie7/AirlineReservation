@@ -28,9 +28,9 @@ public class RegisterController implements Initializable {
 
 
     @FXML
-    private TextField firstnameTextFiled;
+    private TextField nameTextFiled;
     @FXML
-    private TextField lastnameTextFiled;
+    private TextField passportTextFiled;
     @FXML
     private TextField usernameTextFiled;
 
@@ -42,7 +42,7 @@ public class RegisterController implements Initializable {
     @FXML
     public void registerButtonOnAction(ActionEvent event){
         //registrationMessageLabel.setText("User has been registered successfully!!");
-        if (firstnameTextFiled.getText().isEmpty() || lastnameTextFiled.getText().isEmpty()|| usernameTextFiled.getText().isEmpty()
+        if (nameTextFiled.getText().isEmpty() || passportTextFiled.getText().isEmpty()|| usernameTextFiled.getText().isEmpty()
         ||setPasswordField.getText().isEmpty() || confirmPasswordField.getText().isEmpty()
         ){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -71,13 +71,13 @@ public class RegisterController implements Initializable {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String firstname = firstnameTextFiled.getText();
-        String lastname = lastnameTextFiled.getText();
+        String name = nameTextFiled.getText();
+        String passport = passportTextFiled.getText();
         String username = usernameTextFiled.getText();
         String password = setPasswordField.getText();
 
-        String insertFields = "INSERT INTO user_account(firstname,lastname,username,password) VALUES('";
-        String insertValues = firstname +"','"+ lastname +"','" + username +"','" + password + "')";
+        String insertFields = "INSERT INTO user_account(name,passport,username,password) VALUES('";
+        String insertValues = name +"','"+ passport +"','" + username +"','" + password + "')";
         String insertToRegister = insertFields + insertValues;
 
         Statement statement = null;

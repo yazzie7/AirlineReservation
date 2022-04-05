@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.FlightPage">
+   <children>
+      <Button fx:id="Find" layoutX="93.0" layoutY="302.0" mnemonicParsing="false" onAction="#push1" prefHeight="58.0" prefWidth="89.0" text="Find Flight" />
+      <Button fx:id="contacter" layoutX="421.0" layoutY="302.0" mnemonicParsing="false" onAction="#push3" prefHeight="58.0" prefWidth="89.0" text="Contact">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="tickets" layoutX="257.0" layoutY="302.0" mnemonicParsing="false" onAction="#push2" prefHeight="58.0" prefWidth="89.0" text="My Tickets" />
+      <ImageView fitHeight="342.0" fitWidth="654.0" layoutX="1.0" layoutY="-74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../target/classes/com/example/login/微信图片_20220404152207.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

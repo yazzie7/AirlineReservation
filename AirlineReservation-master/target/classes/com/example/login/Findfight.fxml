@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="0.0" prefWidth="26.0" style="-fx-background-color: #00A8A8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Findfight">
+   <children>
+      <TableView fx:id="table" prefHeight="363.0" prefWidth="600.0" style="-fx-background-color: #27436B;">
+        <columns>
+          <TableColumn fx:id="departure" prefWidth="119.0" style="-fx-background-color: #00A8A8;" text="Departure" />
+          <TableColumn fx:id="destinations" prefWidth="101.0" style="-fx-background-color: #00A8A8;" text="Destinations" />
+            <TableColumn fx:id="time" prefWidth="171.0" style="-fx-background-color: #00A8A8;" text="Time">
+               <columns>
+                  <TableColumn fx:id="takeoff" prefWidth="75.0" style="-fx-background-color: #00A8A8;" text="Take-off" />
+                  <TableColumn fx:id="landing" prefWidth="75.0" style="-fx-background-color: #00A8A8;" text="Landing" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="airlines" prefWidth="171.0" style="-fx-background-color: #00A8A8;" text="Airlines" />
+            <TableColumn fx:id="number" prefWidth="58.0" text="No." />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

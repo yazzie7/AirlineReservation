@@ -8,16 +8,16 @@
    <children>
       <TableView fx:id="table" prefHeight="363.0" prefWidth="600.0" style="-fx-background-color: #27436B;">
         <columns>
-          <TableColumn fx:id="departure" prefWidth="119.0" style="-fx-background-color: #00A8A8;" text="Departure" />
-          <TableColumn fx:id="destinations" prefWidth="101.0" style="-fx-background-color: #00A8A8;" text="Destinations" />
-            <TableColumn fx:id="time" prefWidth="171.0" style="-fx-background-color: #00A8A8;" text="Time">
+          <TableColumn fx:id="departure" prefWidth="126.0" style="-fx-background-color: #00A8A8;" text="Departure" />
+          <TableColumn fx:id="destinations" prefWidth="116.0" style="-fx-background-color: bule;" text="Destinations" />
+            <TableColumn fx:id="time" prefWidth="139.0" style="-fx-background-color: #00A8A8;" text="Time">
                <columns>
                   <TableColumn fx:id="takeoff" prefWidth="75.0" style="-fx-background-color: #00A8A8;" text="Take-off" />
                   <TableColumn fx:id="landing" prefWidth="75.0" style="-fx-background-color: #00A8A8;" text="Landing" />
                </columns>
             </TableColumn>
-            <TableColumn fx:id="airlines" prefWidth="171.0" style="-fx-background-color: #00A8A8;" text="Airlines" />
-            <TableColumn fx:id="number" prefWidth="58.0" text="No." />
+            <TableColumn fx:id="airlines" prefWidth="132.0" style="-fx-background-color: bule;" text="Airlines" />
+            <TableColumn fx:id="number" prefWidth="97.0" text="No" />
         </columns>
       </TableView>
    </children>

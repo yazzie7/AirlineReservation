@@ -3,6 +3,8 @@ package com.example.login;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
+import java.sql.Time;
+
 public class Ticket {
     private final SimpleStringProperty Airlines;
     private final SimpleStringProperty Departure;
@@ -77,14 +79,14 @@ public class Ticket {
         this.NO.set(NO);
     }
 
-    public Ticket(String Departure,String Destinations, Integer Takeoff, Integer Landing, String Airlines,Integer No) {
+    public Ticket(String Departure, String Destinations, Integer Takeoff, Integer Landing, String Airlines, Integer NO) {
 
         this.Airlines = new SimpleStringProperty(Airlines);
         this.Departure = new SimpleStringProperty(Departure);
         this.Destinations = new SimpleStringProperty(Destinations);
         this.Takeoff = new SimpleIntegerProperty(Takeoff);
         this.Landing = new SimpleIntegerProperty(Landing);
-        this.NO = new SimpleIntegerProperty(No);
+        this.NO = new SimpleIntegerProperty(NO);
 
 
 

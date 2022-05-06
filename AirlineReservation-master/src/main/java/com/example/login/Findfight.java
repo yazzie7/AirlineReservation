@@ -13,13 +13,11 @@ import java.util.logging.Logger;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -69,22 +67,25 @@ public class Findfight implements Initializable {
 
         departure.setCellValueFactory(new PropertyValueFactory("Departure"));
         destinations.setCellValueFactory(new PropertyValueFactory("Destinations"));
-        takeoff.setCellValueFactory(new PropertyValueFactory("Take-off"));
+        takeoff.setCellValueFactory(new PropertyValueFactory("Takeoff"));
         landing.setCellValueFactory(new PropertyValueFactory("Landing"));
         airlines.setCellValueFactory(new PropertyValueFactory("Airlines"));
-        number.setCellValueFactory(new PropertyValueFactory("No."));
+        number.setCellValueFactory(new PropertyValueFactory("NO"));
         table.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
-                    showCustomerDialog((Ticket) table.getSelectionModel().getSelectedItem());
+                    try {
+                        showCustomerDialog((Ticket) table.getSelectionModel().getSelectedItem());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     System.out.println(table.getSelectionModel().getSelectedItem());
 
                 }
             }
+//
 
-            private void showCustomerDialog(Ticket selectedItem) {
-            }
         });
 
         try {
@@ -92,7 +93,7 @@ public class Findfight implements Initializable {
         }catch(ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String sql4 = "SELECT * FROM ticket_inf";
+        String sql4 = "SELECT * FROM inf_ticket";
         ObservableList<Ticket> data = FXCollections.observableArrayList();
         try {
             cont = DriverManager.getConnection(url, databaseUser, databasePassword);
@@ -119,7 +120,25 @@ public class Findfight implements Initializable {
             }
         }
     }
+    public Stage showCustomerDialog(Ticket a) throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource(
+                        "buy.fxml"
+                )
+        );
 
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setScene(
+                new Scene(loader.load())
+        );
+
+        Buy controller = loader.getController();
+       // controller.initData(a);
+
+        stage.show();
+
+        return stage;
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {

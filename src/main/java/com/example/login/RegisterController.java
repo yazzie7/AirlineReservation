@@ -1,6 +1,6 @@
 package com.example.login;
 
-import javafx.application.Platform;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -85,6 +84,7 @@ public class RegisterController implements Initializable {
             statement = connectDB.createStatement();
             statement.executeUpdate(insertToRegister);
             registrationMessageLabel.setText("User has been registered successfully!!");
+
 
         } catch (Exception e) {
             e.printStackTrace();

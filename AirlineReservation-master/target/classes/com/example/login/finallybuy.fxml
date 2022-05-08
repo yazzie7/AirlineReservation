@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00A8A8;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.Finallybuy">
+   <children>
+      <Button fx:id="back" layoutX="166.0" layoutY="270.0" mnemonicParsing="false" onAction="#event11" text="Back" />
+      <Button fx:id="next" layoutX="368.0" layoutY="270.0" mnemonicParsing="false" onAction="#event22" text="Next" />
+      <TextField layoutX="200.0" layoutY="102.0" promptText="Thank you for buying!" style="-fx-background-color: #00A8A8;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

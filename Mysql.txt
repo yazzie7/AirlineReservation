@@ -1,0 +1,29 @@
+In our project ,we need to finish two tables
+                  this first one is used to login and register:
+
+
+
+SELECT*FROM user_account;
+
+INSERT INTO user_account(firstname,lastname,usename,password) VALUES ("John","wick","Wang","abc");
+
+
+
+
+
+
+the second one is ticket
+SELECT*FROM inf_ticket;
+
+INSERT INTO inf_ticket(inf_Departure,inf_Destinations,inf_Takeoff,inf_Landing,inf_Airlines,inf_Price) VALUES ("BEIJING","Amsterdam","1200","2100","China Airlines","2000000");
+
+
+
+You could design your data,it is ok,but do not forget, in javafx,check the database name and password to your own name and password,because the database is local database,and if you want ,could use mysql workbench,it will be easy
+
+
+
+
+
+
+
